@@ -1,5 +1,5 @@
 class CashRegister
-  attr_accessor :item, :price, :discount, :total, :last_item#:cash_register :cash_register_with_discount
+  attr_accessor :item, :price, :discount, :total, :last_item
 
 #how do we create 2 types of cash registers? do instance methods get moved to inside these methods? or called outside this initialization method inside class?
   def initialize(discount = 0)
@@ -8,19 +8,13 @@ class CashRegister
     @discount = discount
   end
 
-  def self.total
-    @total
-  end
-
-  def self.items
-    @items
-  end
-
   def self.add_item(item, price, quantity=1)
-    self.items << item
-    self.total += (price * quantity)
+    self.total += price * quantity
+    quantity.times do
+      items << item
+    end
     #keep track of last item in case it needs to be voided
-    @last_item = self.new(item, price, quantity=1)
+    @last_item = price * quantity
   end
 
 #how to apply discount methods for both types of cash register??
