@@ -14,7 +14,7 @@ class CashRegister
       self.items << item
     end
     #keep track of last item in case it needs to be voided
-    @last_item = price * quantity
+    self.last_item = price * quantity
   end
 
 #how to apply discount methods for both types of cash register??
