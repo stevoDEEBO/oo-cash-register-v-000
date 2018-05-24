@@ -17,7 +17,6 @@ class CashRegister
     self.last_item = price * quantity
   end
 
-#how to apply discount methods for both types of cash register??
   def apply_discount
     if discount != 0
       self.total = (total * ((100.0 - discount.to_f)/100)).to_i
@@ -27,7 +26,6 @@ class CashRegister
     end
   end
 
-#delete last added item and subtract price from total- how to find this item?
   def void_last_transaction
     self.total = self.total - self.last_item
   end
