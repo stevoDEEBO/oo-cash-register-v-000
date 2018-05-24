@@ -24,13 +24,13 @@ class CashRegister
   end
 
 #how to apply discount methods for both types of cash register??
-  def self.cash_register::apply_discount
-    puts "There is no discount to apply."
-  end
-
-  def self.cash_register_with_discount::apply_discount
-    @total -= (@total * discount)
-    puts "After the discount, the total comes to #{@total}"
+  def self.apply_discount
+    if self::new.discount = 0
+      puts "There is no discount to apply."
+    else
+      @total -= (@total * self::new.discount)
+      puts "After the discount, the total comes to #{@total}"
+    end
   end
 
 #delete last added item and subtract price from total- how to find this item?
