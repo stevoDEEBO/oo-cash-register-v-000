@@ -8,7 +8,7 @@ class CashRegister
     @discount = discount
   end
 
-  def self.add_item(item, price, quantity=1)
+  def add_item(item, price, quantity=1)
     self.total += price * quantity
     quantity.times do
       items << item
@@ -18,7 +18,7 @@ class CashRegister
   end
 
 #how to apply discount methods for both types of cash register??
-  def self.apply_discount
+  def apply_discount
     if self::new.discount = 0
       puts "There is no discount to apply."
     else
