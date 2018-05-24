@@ -20,7 +20,7 @@ class CashRegister
     self.items << item
     self.total += (price * quantity)
     #keep track of last item in case it needs to be voided
-    @last_item = [item, price, quantity]
+    @last_item = self.new(item, price, quantity=1)
   end
 
 #how to apply discount methods for both types of cash register??
