@@ -8,9 +8,9 @@ class CashRegister
     @discount = discount
   end
 
-  #def self.total
-  #  @total
-  #end
+  def self.total
+    @total
+  end
 
   def self.items
     @items
