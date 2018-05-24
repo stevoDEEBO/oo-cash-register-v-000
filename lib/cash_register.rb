@@ -13,7 +13,7 @@ class CashRegister
     quantity.times do
       self.items << item
     end
-    #keep track of last item in case it needs to be voided
+    #keep track of cost of last item in case it needs to be voided
     self.last_item = price * quantity
   end
 
