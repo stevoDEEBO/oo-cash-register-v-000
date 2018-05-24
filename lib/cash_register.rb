@@ -29,7 +29,6 @@ class CashRegister
 
 #delete last added item and subtract price from total- how to find this item?
   def void_last_transaction
-    @items::self.add_item.last_item[0]
-    @total -= @items::self.add_item.last_item([1]*[2])
+    self.items = self.items - self.last_item
   end
 end
