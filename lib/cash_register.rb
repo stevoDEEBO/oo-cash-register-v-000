@@ -19,7 +19,7 @@ class CashRegister
 
 #how to apply discount methods for both types of cash register??
   def apply_discount
-    if self::new.discount == 0
+    if discount == 0
       puts "There is no discount to apply."
     else
       @total -= (@total * self::new.discount)
