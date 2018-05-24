@@ -29,6 +29,6 @@ class CashRegister
 
 #delete last added item and subtract price from total- how to find this item?
   def void_last_transaction
-    self.items = self.items - self.last_item
+    self.total = self.total - self.last_item
   end
 end
