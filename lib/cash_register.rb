@@ -1,5 +1,5 @@
 class CashRegister
-  attr_accessor :item, :price, :discount, :last_item#:cash_register :cash_register_with_discount
+  attr_accessor :item, :price, :discount, :total, :last_item#:cash_register :cash_register_with_discount
 
 #how do we create 2 types of cash registers? do instance methods get moved to inside these methods? or called outside this initialization method inside class?
   def initialize(discount = 0)
