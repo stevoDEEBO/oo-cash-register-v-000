@@ -22,8 +22,8 @@ class CashRegister
     if discount == 0
       puts "There is no discount to apply."
     else
-      @total -= (@total * self::new.discount)
-      puts "After the discount, the total comes to #{@total}"
+      self.total = (total * (100.0 - discount.to_f)/100).to_i
+      puts "After the discount, the total comes to #{self.total}"
     end
   end
 
