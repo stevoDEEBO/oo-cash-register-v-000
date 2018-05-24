@@ -37,4 +37,5 @@ class CashRegister
   def void_last_transaction
     @items::self.add_item.last_item[0]
     @total -= @items::self.add_item.last_item([1]*[2])
+  end
 end
